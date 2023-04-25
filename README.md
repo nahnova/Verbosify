@@ -1,4 +1,4 @@
-# Verbosity: Student Feedback and Goal Management System
+# Verbosify: Student Feedback and Goal Management System extended with gamefication
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![C#](https://img.shields.io/badge/C%23-WinForms-brightgreen)](https://docs.microsoft.com/en-us/dotnet/csharp/)
