@@ -37,7 +37,7 @@ The project is built using the N-Tier architecture, which allows for a scalable,
 
 ### FBS.Entity
 
-This layer contains the classes representing the various entities in the system, such as Feedback, Goal, Group, Student, Subgoal, and Teacher. These classes define the data structure and relationships among them.
+This layer contains the classes representing the various entities in the system, such as Feedback, Goal, Group, Student, Subgoal, Teacher, Leaderboard, Team, Badge. These classes define the data structure and relationships among them.
 
 ### FBS.Repository
 
