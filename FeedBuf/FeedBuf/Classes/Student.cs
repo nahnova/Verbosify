@@ -76,5 +76,11 @@ public class Student
     {
         StudentRepo.UpdateStudent(id, firstName, lastName, email, gender);
     }
+
+    public void UpdateXpAmount(int id, int xpAmount, int xpProgression)
+    {
+        StudentRepo.UpdateXpAmount(id, xpAmount, xpProgression);
+    }
+
 }
 

@@ -136,5 +136,29 @@ namespace Repository
             }
             finally { connection.Dispose(); }
         }
+
+        public void UpdateXpAmount(int id, int xp, int level)
+        {
+            SqlConnection connection = new SqlConnection();
+            try
+            {
+                connection.ConnectionString = iDB.Sqlcon.ConnectionString;
+                connection.Open();
+                string sql = "UPDATE Student SET studentLevel = @studentLevel, xpProgression = @xpProgression WHERE id = @id";
+                using (SqlCommand cmd = new SqlCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@studentLevel", level);
+                    cmd.Parameters.AddWithValue("@xpProgression", xp);
+                    cmd.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally { connection.Dispose(); }
+        }
     }   
 }

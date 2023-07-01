@@ -9,6 +9,8 @@
 
         public Goal goal = new Goal(0,0,"","","","");
 
+        public Student student = new Student(0,"","","","","",0,0,0,"");
+
         public StudentGoalOverview(int id, int currentXp, int currentLevel)
         {
             InitializeComponent();
@@ -98,10 +100,16 @@
                 int xp = CurrentXp += 20;
                 int level = CurrentLevel;
 
-                /*if (CurrentXp => \100)
+                if (CurrentXp <= 100)
                 {
-                    StudentsRepo.UpdateXpAmount(StudentId, xp, level);
-                }*/
+                    student.UpdateXpAmount(StudentId, xp, level);
+                }
+                else if (CurrentXp > 100)
+                {
+                    level = CurrentLevel += 1;
+                    xp = CurrentXp - 100;
+                    student.UpdateXpAmount(StudentId, xp, level);
+                }
             }
         }
 
