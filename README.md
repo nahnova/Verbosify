@@ -45,7 +45,7 @@ The project is built using the ~~N-Tier~~ architecture, which allows for a scala
 4. ~~Frontend~~: Contains the WinForms forms for the user interface.
 5. ~~FBS.Testing~~: Contains a console app to test the SQL connection.
 
-### Monolith Architecture
+## Monolith Architecture
 
 > :construction: **Transitioned to Monolith Architecture**: Based on valuable feedback received, the project has transitioned to a Monolith Architecture. However, some aspects of layering have been retained to maintain a logical separation of responsibilities.
 
