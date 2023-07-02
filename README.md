@@ -10,8 +10,8 @@ Verbosity is an open-source WinForms application built with .NET, designed to he
 ## Table of Contents
 
 - [Features](#features)
-- [~~Deprecated N-Tier Architecture~~](#n-tier-architecture)\
-- [Monolith Architecture](#monolith-architecture)/
+- [~~Deprecated N-Tier Architecture~~](#n-tier-architecture)
+- [Monolith Architecture](#monolith-architecture)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Documentation](#documentation)
