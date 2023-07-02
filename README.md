@@ -45,26 +45,6 @@ The project is built using the ~~N-Tier~~ architecture, which allows for a scala
 4. ~~Frontend~~: Contains the WinForms forms for the user interface.
 5. ~~FBS.Testing~~: Contains a console app to test the SQL connection.
 
-### ~~FBS.Entity~~
-
-This layer contains the classes representing the various entities in the system, such as Feedback, Goal, Group, Student, Subgoal, Teacher, Leaderboard, Team, Badge. These classes define the data structure and relationships among them.
-
-### ~~FBS.Repository~~
-
-This layer is responsible for executing SQL queries to interact with the SQL Server. It contains methods to perform CRUD operations (Create, Read, Update, Delete) on the different entities in the system.
-
-### ~~FBS.DataAccess~~
-
-The data access layer is responsible for managing the connection with the SQL Server, using the connection string provided in the configuration file. It abstracts the details of connecting to the database from the other layers.
-
-### ~~Frontend~~
-
-This layer contains the WinForms forms, which make up the user interface of the application. The forms provide a user-friendly interface for teachers and students to manage feedback, goals, and subgoals.
-
-## ~~FBS.Testing~~
-This layer contains a console app to test the SQL connection.
-
-
 ### Monolith Architecture
 
 > :construction: **Transitioned to Monolith Architecture**: Based on valuable feedback received, the project has transitioned to a Monolith Architecture. However, some aspects of layering have been retained to maintain a logical separation of responsibilities.
