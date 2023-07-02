@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![C#](https://img.shields.io/badge/C%23-WinForms-brightgreen)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 
-Verbosity is an open-source WinForms application built with .NET, designed to help teachers and students communicate effectively by managing feedback and tracking goals. Teachers can leave feedback for students, while students can register goals and subgoals to improve their learning experience.
+Verbosify is an open-source WinForms application built with .NET, designed to help teachers and students communicate effectively by managing feedback and tracking goals. Teachers can leave feedback for students, while students can register goals and subgoals to improve their learning experience extended with gamefication elements.
 
 [Explanation Video / Pitch of System(CLICKME)](https://www.youtube.com/watch?v=LM9w8CuV1i8)
 
@@ -59,7 +59,7 @@ By adopting the Monolith Architecture with a partial layering approach, the appl
 1. Clone or download the project to your local machine.
 2. Open the solution file in Visual Studio.
 3. Restore the database using the provided bak file located in the project root directory. This can be done by opening SQL Server Management Studio, right-clicking on the Databases folder and selecting "Restore Database", then selecting the .bak file and following the prompts to restore the database.
-2. Update the ConnectionString inside FBS.DataAccess with the appropriate server name and database name. This can be done by opening the FBS.DataAccess project in Visual Studio, opening the `/FBS.DataAccess/FeedbackCollection/FeedbackCollectionDBDataAccess.cs` file, and updating the `connectionString` property with the appropriate server name and database name.
+2. Update the ConnectionString inside FBS.DataAccess with the appropriate server name and database name. This can be done by opening the FBS.DataAccess project in Visual Studio, opening the `/FeedBuf/FeedbackCollection/DataAccess.cs` file, and updating the `connectionString` property with the appropriate server name and database name.
 5. Install the SQL Server NuGet package by right-clicking on the solution in Visual Studio and selecting "Manage NuGet Packages...", then searching for and installing the `System.Data.SqlClient` package.
 6. Build the solution in Visual Studio.
 
@@ -67,16 +67,12 @@ By adopting the Monolith Architecture with a partial layering approach, the appl
 
 1. Restore the database using the provided bak file located in the project root directory. This can be done by opening SQL Server Management Studio, right-clicking on the Databases folder and selecting "Restore Database", then selecting the .bak file and following the prompts to restore the database.
 
-2. Update the ConnectionString inside FBS.DataAccess with the appropriate server name and database name. This can be done by opening the FBS.DataAccess project in Visual Studio, opening the `/FBS.DataAccess/FeedbackCollection/FeedbackCollectionDBDataAccess.cs` file, and updating the `connectionString` property with the appropriate server name and database name.
+2. Update the ConnectionString inside FBS.DataAccess with the appropriate server name and database name. This can be done by opening the FBS.DataAccess project in Visual Studio, opening the `/FeedBuf/FeedbackCollection/DataAccess.cs` file, and updating the `connectionString` property with the appropriate server name and database name.
 
 3. Install the SQL Server NuGet package by right-clicking on the solution in Visual Studio and selecting "Manage NuGet Packages...", then searching for and installing the `System.Data.SqlClient` package.
 
 4. Run the Windows Forms application called FeedbackSysteem by opening the Frontend project in Visual Studio, setting the startup project to FeedbackSysteem, and running the application. Once the application is running, you can log in as a teacher or a student and begin using the application to manage feedback and goals.
 
-
-## Documentation
-
-_TODO: Provide a link to the detailed documentation._
 
 ## Contributing
 
