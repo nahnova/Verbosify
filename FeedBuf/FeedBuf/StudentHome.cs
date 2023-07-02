@@ -110,5 +110,11 @@ namespace FeedBuf
                     break;
             }
         }
+
+        private void GoToLeaderboard(object sender, EventArgs e)
+        {
+            Leaderboard leaderboard = new Leaderboard();
+            leaderboard.ShowDialog();
+        }
     }
 }

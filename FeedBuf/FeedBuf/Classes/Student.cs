@@ -72,6 +72,13 @@ public class Student
         return student;
     }
 
+    public List<Student> GetStudents()
+    {
+        StudentRepo.students.Clear();
+        List<Student> students = StudentRepo.GetStudentsFromDatabase();
+        return students;
+    }
+
     public void UpdateStudent(int id, string firstName, string lastName, string email, string gender)
     {
         StudentRepo.UpdateStudent(id, firstName, lastName, email, gender);

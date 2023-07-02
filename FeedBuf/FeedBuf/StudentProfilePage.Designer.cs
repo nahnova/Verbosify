@@ -38,6 +38,7 @@
             label4 = new Label();
             label5 = new Label();
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -121,7 +122,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(118, 297);
+            button1.Location = new Point(118, 331);
             button1.Name = "button1";
             button1.Size = new Size(119, 29);
             button1.TabIndex = 10;
@@ -129,11 +130,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += updateProfile;
             // 
-            // ProfilePage
+            // button2
+            // 
+            button2.Location = new Point(118, 284);
+            button2.Name = "button2";
+            button2.Size = new Size(119, 31);
+            button2.TabIndex = 11;
+            button2.Text = "Select badges";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // StudentProfilePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(360, 387);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -144,7 +156,7 @@
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Name = "ProfilePage";
+            Name = "StudentProfilePage";
             Text = "ProfilePage";
             ResumeLayout(false);
             PerformLayout();
@@ -162,5 +174,6 @@
         private Label label4;
         private Label label5;
         private Button button1;
+        private Button button2;
     }
 }

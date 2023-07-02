@@ -51,7 +51,7 @@ namespace Repository
                     cnn.ConnectionString = iDB.Sqlcon.ConnectionString;
                     cnn.Open();
                     cmd.Connection = cnn;
-                    cmd.CommandText = "SELECT id,firstName,lastName,email,gender,password,studentLevel,xpAmount,xpProgression,rank  FROM Student ORDER BY id";
+                    cmd.CommandText = "SELECT id,firstName,lastName,email,gender,password,studentLevel,xpAmount,xpProgression,rank FROM Student WHERE studentLevel IS NOT NULL ORDER BY studentLevel DESC";
                     using (SqlDataReader dataReader = cmd.ExecuteReader())
                     {
                         while (dataReader.Read())
