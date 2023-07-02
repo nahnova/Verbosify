@@ -10,7 +10,8 @@ Verbosity is an open-source WinForms application built with .NET, designed to he
 ## Table of Contents
 
 - [Features](#features)
-- [N-Tier Architecture](#n-tier-architecture)
+- [~~Deprecated N-Tier Architecture~~](#n-tier-architecture)\
+- [Monolith Architecture](#monolith-architecture)/
 - [Installation](#installation)
 - [Usage](#usage)
 - [Documentation](#documentation)
@@ -21,39 +22,57 @@ Verbosity is an open-source WinForms application built with .NET, designed to he
 
 - Teachers can leave feedback for students.
 - Students can register goals and subgoals.
-- Student can be motivated by gamefication elements using Badges,Team,Leaderboard entities
+- Students can be motivated by gamification elements, including:
+  - Experience Points (XP) earned for completing assignments and providing feedback.
+  - Student level system based on XP, allowing students to progress and challenge themselves.
+  - Leaderboards displaying student rankings based on their level.
+  - Visual badges to recognize students' achievements and contributions.
+  - Titles that students can earn and use for specific visualizations.
 - Intuitive and user-friendly interface.
 - Secure data storage and handling.
 - Easily customizable and extensible.
 
-## N-Tier Architecture
 
-The project is built using the N-Tier architecture, which allows for a scalable, maintainable, and modular application. The architecture is divided into the following layers:
+## ~~Deprecated N-Tier Architecture~~
 
-1. `FBS.Entity`: Contains the entities: Feedback, Goal, Group, Student, Subgoal, and Teacher.
-2. `FBS.Repository`: Includes all SQL statements that interact with the SQL Server.
-3. `FBS.DataAccess`: Data access layer containing the connection string for the database.
-4. `Frontend`: Contains the WinForms forms for the user interface.
-5. `FBS.Testing`: Contains a console app to test the SQL connection.
+> :warning: **Deprecated**: The initial design of Verbosify involved an N-Tier Architecture. However, during the development process, it was determined that the N-Tier Architecture made the modeling of the software using UML more challenging. As a result, the architecture was deprecated, and the system has been implemented using a different approach.
 
-### FBS.Entity
+The project is built using the ~~N-Tier~~ architecture, which allows for a scalable, maintainable, and modular application. The architecture is divided into the following layers:
+
+1. ~~FBS.Entity~~: Contains the entities: Feedback, Goal, Group, Student, Subgoal, and Teacher.
+2. ~~FBS.Repository~~: Includes all SQL statements that interact with the SQL Server.
+3. ~~FBS.DataAccess~~: Data access layer containing the connection string for the database.
+4. ~~Frontend~~: Contains the WinForms forms for the user interface.
+5. ~~FBS.Testing~~: Contains a console app to test the SQL connection.
+
+### ~~FBS.Entity~~
 
 This layer contains the classes representing the various entities in the system, such as Feedback, Goal, Group, Student, Subgoal, Teacher, Leaderboard, Team, Badge. These classes define the data structure and relationships among them.
 
-### FBS.Repository
+### ~~FBS.Repository~~
 
 This layer is responsible for executing SQL queries to interact with the SQL Server. It contains methods to perform CRUD operations (Create, Read, Update, Delete) on the different entities in the system.
 
-### FBS.DataAccess
+### ~~FBS.DataAccess~~
 
 The data access layer is responsible for managing the connection with the SQL Server, using the connection string provided in the configuration file. It abstracts the details of connecting to the database from the other layers.
 
-### Frontend
+### ~~Frontend~~
 
 This layer contains the WinForms forms, which make up the user interface of the application. The forms provide a user-friendly interface for teachers and students to manage feedback, goals, and subgoals.
 
-## FBS.Testing
+## ~~FBS.Testing~~
 This layer contains a console app to test the SQL connection.
+
+
+### Monolith Architecture
+
+> :construction: **Transitioned to Monolith Architecture**: Based on valuable feedback received, the project has transitioned to a Monolith Architecture. However, some aspects of layering have been retained to maintain a logical separation of responsibilities.
+
+In the updated architecture, the frontend of the application utilizes WinForms, where all designs and methods are implemented using classes. The classes contain lists and objects that are populated by methods referencing the data access layer. For example, the `Student` class includes a `StudentDal` (StudentDataAccessLayer), which is responsible for executing SQL queries and interacting with the database. This design choice aligns more closely with the UML diagrams, as suggested by Miel Noelanders.
+
+By adopting the Monolith Architecture with a partial layering approach, the application still benefits from a modular structure while ensuring simplicity and easier alignment with the UML diagrams.
+
 
 ## Installation:
 
