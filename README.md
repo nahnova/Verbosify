@@ -71,7 +71,7 @@ By adopting the Monolith Architecture with a partial layering approach, the appl
 
 3. Install the SQL Server NuGet package by right-clicking on the solution in Visual Studio and selecting "Manage NuGet Packages...", then searching for and installing the `System.Data.SqlClient` package.
 
-4. Run the Windows Forms application called FeedbackSysteem by opening the Frontend project in Visual Studio, setting the startup project to FeedbackSysteem, and running the application. Once the application is running, you can log in as a teacher or a student and begin using the application to manage feedback and goals.
+4. Run the Windows Forms application called FeedBuf by opening the Frontend project in Visual Studio, setting the startup project to FeedbackBuf, and running the application. Once the application is running, you can log in as a teacher or a student and begin using the application to manage feedback and goals.
 
 
 ## Contributing
